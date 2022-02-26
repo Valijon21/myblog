@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +12,15 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Valijon's blog</a>
+          <a class="navbar-brand" href="{% url 'home' %}">Valijon's blog</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-              <a class="nav-link" href="#">About Me</a>
-              <a class="nav-link" href="#">Faccebook</a>
-              <a class="nav-link disabled">Blog</a>
+              <a class="nav-link" href="{% static "1.jpeg" %}">About Me</a>
+              <a class="nav-link" href="https://www.facebook.com/">Faccebook</a>
+              <a class="nav-link " href="{% url "showblog" %}">Blog</a>
             </div>
           </div>
         </div>
@@ -34,7 +35,9 @@
             <p class="lead text-muted">Hi I'm backend programmer </p>
             <p>
               <a href="mailto:freedom219307@gmail.com" class="btn btn-primary my-2">Mail me</a>
+              
             </p>
+            <img src="{% static "1.jpeg" %}" heigt=200 width=200 class="img-fluid"
           </div>
         </div>
       </section>

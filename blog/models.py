@@ -8,3 +8,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_summary(self): # text parametrini faqat 70 belgisini chiqar func
+        return self.text[:70]
