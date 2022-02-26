@@ -41,16 +41,17 @@
 
 <div class="album py-5 bg-light">
   <div class="container">
+
+    <div class="row">
 {% for event in events.all %}
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-          <div>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          
           <img class="card-img-top" src="{{ event.event_img.url }}"/>
           </div>
           <div class="card-body">
             <p class="card-text">{{ event.event_text }}</p>        
-          </div>
+          
         </div>
       </div>
 
